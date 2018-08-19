@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseKit", "BaseKit\BaseKit.csproj", "{685DE1C6-D43C-6062-DD54-EB3849B3C6C3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Android|Any CPU = Android|Any CPU
+		IOS|Any CPU = IOS|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{685DE1C6-D43C-6062-DD54-EB3849B3C6C3}.Android|Any CPU.ActiveCfg = Android|Any CPU
+		{685DE1C6-D43C-6062-DD54-EB3849B3C6C3}.Android|Any CPU.Build.0 = Android|Any CPU
+		{685DE1C6-D43C-6062-DD54-EB3849B3C6C3}.IOS|Any CPU.ActiveCfg = IOS|Any CPU
+		{685DE1C6-D43C-6062-DD54-EB3849B3C6C3}.IOS|Any CPU.Build.0 = IOS|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
