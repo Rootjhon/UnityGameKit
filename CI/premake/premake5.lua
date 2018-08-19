@@ -16,6 +16,16 @@ function CreateNewPrj(sPrjName,sPath)
       location (sPath)
       files(sPath .. "/**.cs")
 end
+function UnityDependencies(sUnityVersion)
+      local UnityDeps = {
+            "UnityEditor",
+            "UnityEngine",
+      }
+
+      for _,v in ipairs(UnityDeps) do
+            links{ string.format("../../Dependencies/%s/",v) }
+      end
+end
 --[[Premake End--]]
 
 workspace "UnityGameKit"
@@ -28,6 +38,7 @@ workspace "UnityGameKit"
       dotnetframework  "3.5"
       links { "System","System.Data","System.Core"}
 
+UnityDependencies("Unity5.5.2p1")
 
 CreateNewPrj("BaseKit","../../BaseKit" )
 
