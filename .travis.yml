@@ -13,9 +13,5 @@ before_install:
 - chmod a+x ./CI/travis/Unity_EditorTests.sh
 install:
 - ./CI/travis/Unity_install.sh
-- npm install
 script:
 - ./CI/travis/Unity_EditorTests.sh
-- npm test
-after_success:
-- npm run coveralls
