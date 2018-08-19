@@ -1,5 +1,5 @@
 
-#ResourceManager
+# ResourceManager
 
 ## `ResConfig`
 
