@@ -23,7 +23,7 @@ function UnityDependencies(sUnityVersion)
       }
 
       for _,v in ipairs(UnityDeps) do
-            links{ string.format("../../Dependencies/%s/",v) }
+            links{ string.format("../../Dependencies/%s/%s",sUnityVersion,v) }
       end
 end
 --[[Premake End--]]
