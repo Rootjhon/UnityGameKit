@@ -15,3 +15,10 @@ install:
 - ./CI/travis/Unity_install.sh
 script:
 - ./CI/travis/Unity_EditorTests.sh
+notifications:
+    email:
+        recipients:
+            - 354888562@qq.com
+            - z275836496@gmail.com
+        on_success: change
+        on_failure: always
