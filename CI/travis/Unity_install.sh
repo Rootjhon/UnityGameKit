@@ -19,11 +19,8 @@ echo "version:$VERSION - hash:$HASH"
 
 function download()
 {
-	package="$1"
-	url="$BASE_URL/$HASH/$package"
-
-	FILENAME=$(basename "$package")
-
+	url="$1"
+	FILENAME=$(basename "$url")
 
 	if [ ! -f "$HOME/cache/$FILENAME" ]; then
 		echo "Downloading Unity from $url: "
@@ -34,7 +31,9 @@ function download()
 function install() 
 {
 	package="$1"
-	download "$package"
+	url="$BASE_URL/$HASH/$package"
+
+	download "$url"
 
 	echo "Installing "$(basename "$package")
 	sudo installer -dumplog -package $(basename "$package") -target /
