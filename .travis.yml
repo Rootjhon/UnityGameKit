@@ -9,12 +9,14 @@ cache:
   - /home/travis/cache/
   - /home/travis/.rvm/
 before_install:
-- chmod a+x ./CI/travis/Unity_install.sh
+- chmod a+x ./CI/travis/Unity_Install.sh
 - chmod a+x ./CI/travis/Unity_EditorTests.sh
+- chmod a+x ./CI/travis/GeneratedPrj_OSX.sh
 install:
-- ./CI/travis/Unity_install.sh
+- ./CI/travis/Unity_Install.sh
 script:
 - ./CI/travis/Unity_EditorTests.sh
+- ./CI/travis/GeneratedPrj_OSX.sh
 notifications:
     email:
         recipients:
