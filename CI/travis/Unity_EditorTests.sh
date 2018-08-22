@@ -1,12 +1,18 @@
 #!/bin/bash
 
-echo "Unity-Editor Testing..."
-
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
-	-runTests \
-	-projectPath "$(pwd)" \
-	-testResults "$(pwd)"/results.xml \
-	-testPlatform editmode
+    -batchmode \
+    -nographics \
+    -noUpm \
+    -silent-crashes \
+    -logFile "$(pwd)/unity.log" \
+    -projectPath "$(pwd)/" \
+    -runEditorTests \
+    -editorTestsResultFile "$(pwd)/test.xml"
 
-echo 'Unity-Editor Test Result:'
-cat "$(pwd)"/results.xml
+CODE=$?
+
+echo $CODE
+cat "$(pwd)/unity.log"
+
+cat "$(pwd)/test.xml" && exit $CODE
