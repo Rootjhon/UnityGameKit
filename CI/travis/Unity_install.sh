@@ -37,8 +37,8 @@ function install()
 
 	FILENAME=$(basename "$url")
 
-	echo "Installing "$(basename "$package")"at "$FILENAME
-	sudo installer -dumplog -package $(basename "$FILENAME") -target /
+	echo "Installing "$(basename "$package")" at "$FILENAME
+	sudo installer -dumplog -package "$HOME/cache/$FILENAME" -target /
 }
 
 # See $BASE_URL/$HASH/unity-$VERSION-$PLATFORM.ini for complete list
