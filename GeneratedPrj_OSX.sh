@@ -1,3 +1,4 @@
+#!/bin/bash
 CUR_PATH="$(cd $(dirname $0); pwd)/CI/premake/"
 chmod 777 ${CUR_PATH}/premake5_MacOS
 
