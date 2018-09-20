@@ -9,7 +9,7 @@ BASE_URL=http://netstorage.unity3d.com/unity
 VERSION="2017.3.0f3"
 
 # Find hash on the html of the unity archives
-tmp=$(curl -s -i -X GET https://unity3d.com/fr/get-unity/download/archive)
+# tmp=$(curl -s -i -X GET https://unity3d.com/fr/get-unity/download/archive)
 re="https:\/\/netstorage\.unity3d\.com\/unity\/(.+?)\/MacEditorInstaller\/Unity-$VERSION\.pkg"
 echo $re
 
@@ -37,7 +37,7 @@ function install()
 
 	FILENAME=$(basename "$url")
 
-	echo "Installing "$(basename "$package")" at "$FILENAME
+	printf "Installing %s at %s" $(basename "$package") $FILENAME
 	sudo installer -dumplog -package "$HOME/cache/$FILENAME" -target /
 }
 
