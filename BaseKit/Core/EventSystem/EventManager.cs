@@ -33,7 +33,7 @@ namespace BaseKit
         /// <summary>
         /// ;
         /// </summary>
-        public EventManager()
+        protected EventManager()
         {
             mMsgHandlers = new Dictionary<int, List<EventFuntion>>();
             mDeleteMsgHandlers = new List<EventFuntion>();
