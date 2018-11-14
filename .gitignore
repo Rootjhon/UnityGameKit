@@ -7,6 +7,7 @@
 *.sln
 [Mm]akefile
 *.csproj
+Library/
 
 # User-specific files
 *.suo
