@@ -8,6 +8,7 @@
 [Mm]akefile
 *.csproj
 Library/
+Temp/
 
 # User-specific files
 *.suo
